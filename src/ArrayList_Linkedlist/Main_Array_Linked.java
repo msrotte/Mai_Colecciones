@@ -1,6 +1,7 @@
 package ArrayList_Linkedlist;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -40,6 +41,19 @@ public class Main_Array_Linked {
         //Mostrar ArrayList
         for (Persona listaArray1 : listaArray) {
             System.out.println(listaArray1.getNombre() + " Index " + listaArray1.getIndex());
+        }
+        
+        //Declaro el iterador
+        
+        Iterator iterador = listaArray.iterator();
+        
+        System.out.println("Mostar lista con ITERADOR");
+        
+        while(iterador.hasNext()){
+            
+            System.out.println(iterador.next() + " ");
+            
+            System.out.println();
         }
         
         //LinkedList: se implementa como una lista de doble enlace. Su rendimiento
@@ -110,7 +124,7 @@ public class Main_Array_Linked {
         //Comprobar si está vacía
         System.out.println("---------¿Está vacía alguna de las listas?--------");
         System.out.println("ArrayList: " + listaArray.isEmpty());
-        System.out.println("ArrayList: " + listaLinked.isEmpty());
+        System.out.println("Linkedlist: " + listaLinked.isEmpty());
         
     }
     
